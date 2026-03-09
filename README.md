@@ -43,21 +43,21 @@ The designed system works in four main stages:
 
 Full-signal Fourier Transform:
 
-\[
+$$
 X(f) = \sum_n x[n] e^{-j 2 \pi f n / F_s}
-\]
+$$
 
 Short-Time Fourier Transform:
 
-\[
+$$
 X(m, k) = \sum_n x[n] w[n - mR] e^{-j 2 \pi k n / N}
-\]
+$$
 
 Time-localized filtering in the STFT domain:
 
-\[
+$$
 \hat{X}(m, k) = G(m, k) \cdot X(m, k)
-\]
+$$
 
 where \(G(m, k)\) is the soft notch mask applied only at the detected frequencies and active time intervals.
 
