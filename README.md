@@ -1,9 +1,7 @@
 # Course Project Report
 
 Course: 01204371 Transform Techniques in Signal Processing  
-Title: Narrowband Interference Analysis and Reduction in `audio_04_group1.wav`  
-Student: [Fill in your name]  
-Student ID: [Fill in your student ID]
+Title: Narrowband Interference Analysis and Reduction in `audio_04_group1.wav`
 
 ## 1. Objective
 
