@@ -1,0 +1,19 @@
+[project]
+name = "signal-final"
+version = "0.1.0"
+description = "Notebook-only analysis environment for the Transform Techniques in Signal Processing course project."
+requires-python = ">=3.12"
+dependencies = [
+  "ipykernel>=7.2.0",
+  "matplotlib>=3.10.8",
+  "notebook>=7.4.7",
+  "numpy>=2.4.3",
+  "soundfile>=0.13.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
