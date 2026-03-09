@@ -104,27 +104,3 @@ The comparison between the original signal and the filtered signal is shown in F
 Figure 4 shows the spectrogram before and after filtering. The horizontal interference lines near `1816.97 Hz` and `3917.49 Hz` are significantly reduced after the soft notch filter is applied, while the remaining structure of the audio signal is still visible.
 
 ![Figure 4. Spectrogram comparison before and after filtering](report_assets/figure_04_spectrogram_comparison.png)
-
-## 5. Discussion
-
-The results show that the proposed system can detect both interference frequencies and determine their active time intervals accurately enough for selective filtering. The first interference is concentrated in the first part of the recording, while the second interference occurs near the end. This confirms that a global filter applied to the entire signal would be less appropriate than a time-localized method.
-
-Using a soft notch filter in the STFT domain provides two main advantages. First, it reduces the target frequencies strongly without requiring the entire audio to be filtered at all times. Second, the gradual attenuation of nearby bins and the smooth time mask reduce the chance of introducing sharp artifacts at the start and end of each filtered interval.
-
-The measured interference reduction exceeds `36 dB` for both noise components, which indicates that the unwanted tones were removed effectively. This is also consistent with the visual evidence in both the spectrum and spectrogram.
-
-## 6. Note on MAE
-
-According to the project instruction, the cleaned audio file will be used to compute the Mean Absolute Error (MAE) against the original clean reference. In this project environment, the clean reference signal is not provided, so a valid MAE cannot be computed locally. For that reason, the evaluation in this report focuses on:
-
-- detected frequencies,
-- detected active time intervals,
-- before/after spectrum comparison,
-- before/after spectrogram comparison,
-- measured reduction of the interference tone amplitude.
-
-The cleaned output file `audio/filtered_audio.wav` is prepared so that the instructor can compute the MAE externally.
-
-## 7. Conclusion
-
-This project designed and implemented a transform-based interference reduction system for the given audio signal. FFT analysis was used to detect narrowband interference frequencies, STFT analysis was used to determine when each interference occurred, and a time-localized soft notch filter in the STFT domain was used to reduce those components. The final results show clear suppression of the two dominant interferences at `1816.97 Hz` and `3917.49 Hz`, with measured reductions of `36.49 dB` and `37.54 dB`, respectively. Therefore, the proposed system satisfies the main requirement of the course project and follows the signal processing methods taught in the course.
